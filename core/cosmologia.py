@@ -18,6 +18,6 @@ def calcular_distancia(z_l, z_s):
 
     Dl = cosmo.angular_diameter_distance(z_l).value * Mpc_to_m
     Ds = cosmo.angular_diameter_distance(z_s).value * Mpc_to_m
-    Dls = cosmo.angular_diameter_distance_z1z2(z_l, z_s).value * Mpc_to_m
+    Dls = cosmo.angular_diameter_distance(z_l, z_s).value * Mpc_to_m
 
     return Dl, Ds, Dls

@@ -1,0 +1,190 @@
+{
+  "data": "2026-09-27",
+  "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "versoes": {
+    "numpy": "2.5.3",
+    "astropy": "8.0.1",
+    "pyqtgraph": "0.14.0",
+    "PyQt6": "6.11.0",
+    "scipy": "1.18.1",
+    "numba": "não instalado (ou sem metadados)"
+  },
+  "qt": "6.11.0",
+  "pyqt": "6.11.0",
+  "backend_teste": "offscreen",
+  "cosmologia": "FlatLambdaCDM(H0=67.4 km / (Mpc s), Om0=0.315, Tcmb0=0.0 K, Neff=3.04, m_nu=None, Ob0=0.0)",
+  "assinatura_distancia": "(z: ~_InputT, z2: ~_InputT | None = None, /) -> astropy.units.quantity.Quantity",
+  "numeros": {
+    "Dl_Mpc": 1300.924657438938,
+    "Ds_Mpc": 1770.6917974852288,
+    "Dls_Mpc": 1120.22946876576,
+    "chi_l_Mpc": 1951.3869861584074,
+    "chi_s_Mpc": 5312.075392455687,
+    "thetaE_nominal_arcsec": 1.9958732118459093,
+    "thetaE_UI_arcsec": 2.000304121670194,
+    "massa_UI_kg": 2.0088899999999998e+42,
+    "massa_UI_solar": 1010000000000.0,
+    "sigma_UI_arcsec": 0.20007686205968347,
+    "fracao_lente": 0.36734926408043933,
+    "passo_pixel_arcsec": 0.012515644555694618,
+    "fonte_posicao_max_arcsec": 5.156620156177408,
+    "fonte_posicao_passo_arcsec": 0.020626480624709634,
+    "sigma_min_arcsec": 0.0020626480624709636,
+    "sigma_max_arcsec": 0.4125296124941927,
+    "raios_alinhados": 28,
+    "beta_obs_1kpc_arcsec": 0.0668722208317208,
+    "central_singular_beta": [
+      0.0,
+      0.0
+    ],
+    "buffer_persistente_MiB": 24.4140625
+  },
+  "benchmarks": [
+    {
+      "resolucao": 400,
+      "amostras": 20,
+      "mediana_ms": 15.962176999892108,
+      "p95_ms": 20.197643149413125,
+      "min_ms": 12.869210999269853,
+      "max_ms": 21.83326100021077
+    },
+    {
+      "resolucao": 800,
+      "amostras": 20,
+      "mediana_ms": 79.78786800003945,
+      "p95_ms": 101.70617270005097,
+      "min_ms": 69.5551089993387,
+      "max_ms": 116.66593099926104
+    },
+    {
+      "resolucao": 1200,
+      "amostras": 20,
+      "mediana_ms": 157.2602120004376,
+      "p95_ms": 205.79568255020604,
+      "min_ms": 139.3808299999364,
+      "max_ms": 211.17539100032445
+    }
+  ],
+  "fontes": {
+    "main.py": {
+      "sha256": "df779a520a414902c4f0e549a146ff81bd1b60b453b2ff77ee806d19dab4f485",
+      "linhas": 54,
+      "simbolos": {
+        "configurar_plataforma_qt": 12,
+        "main": 24
+      }
+    },
+    "core/cosmologia.py": {
+      "sha256": "898b42c10dde43303be60f9282a60508a15a9405088de85132ca5cd339df4a17",
+      "linhas": 23,
+      "simbolos": {
+        "calcular_distancia": 6
+      }
+    },
+    "core/equacoes.py": {
+      "sha256": "f7c9131d7b1d85562ba588b2989332077f0782a6f9dc0e4a61c65831557ca8cf",
+      "linhas": 60,
+      "simbolos": {
+        "SimuladorLente": 9,
+        "__init__": 10,
+        "atualizar_parametros": 18,
+        "equacao_lente_inversa": 35
+      }
+    },
+    "core/geometria.py": {
+      "sha256": "ce607d308d7476829f445b63a30ca5dd9282b68384ef9b370f12be4f748e099d",
+      "linhas": 61,
+      "simbolos": {
+        "imagens_pontuais": 8,
+        "GeometriaRaios": 22,
+        "calcular_geometria": 33
+      }
+    },
+    "render/gerador_fonte.py": {
+      "sha256": "96f2369dcdb3fc860a56e53b2777cfc59ee8b6194aaa271dcc87357c7690b4f0",
+      "linhas": 20,
+      "simbolos": {
+        "perfil_gaussiano": 3
+      }
+    },
+    "render/ray_tracing.py": {
+      "sha256": "ccd028f0e5c55a9f7586fb72da893963532357f4cd6fd1eb24f6a8cfcbfd85a7",
+      "linhas": 66,
+      "simbolos": {
+        "MotorRenderizacao": 5,
+        "__init__": 6,
+        "renderizar_frame": 36,
+        "renderizar_telescopio": 50
+      }
+    },
+    "ui/janela.py": {
+      "sha256": "78471185c32a7d6002ec4371213fa1e527d6f6f7fa7d5c60ec4ba7816ffed4c6",
+      "linhas": 213,
+      "simbolos": {
+        "JanelaSimulador": 15,
+        "__init__": 16,
+        "criar_slider": 145,
+        "adicionar_controle": 152,
+        "agendar_render": 162,
+        "alinhar_fonte": 166,
+        "alternar_modo": 173,
+        "exibir_imagem": 177,
+        "atualizar_render": 191
+      }
+    },
+    "ui/diagrama.py": {
+      "sha256": "156f7a136087272e2fa5c661ddb6f825eea72c2e9e81baba93b577cd9f681d71",
+      "linhas": 144,
+      "simbolos": {
+        "DiagramaRaios": 8,
+        "__init__": 10,
+        "atualizar": 20,
+        "projetar": 28,
+        "brilho": 34,
+        "texto": 47,
+        "seta": 53,
+        "paintEvent": 68
+      }
+    },
+    "tests/test_visualizacoes.py": {
+      "sha256": "c3c02a56e21a0a6b71fb5e57e5cd7b384926c1fed880fe0b335bd3729181e8ea",
+      "linhas": 152,
+      "simbolos": {
+        "RenderTests": 15,
+        "GeometriaTests": 49,
+        "InterfaceTests": 81,
+        "setUp": 86,
+        "test_anel_no_raio_de_einstein": 20,
+        "test_telescopio_deterministico_rgb": 26,
+        "test_massa_muda_raio_e_ambas_imagens": 37,
+        "test_solucoes_satisfazem_equacao_inversa": 53,
+        "test_raios_conectam_fonte_lente_e_observador": 61,
+        "test_distancias_e_redshifts_permanecem_sincronizados": 73,
+        "setUpClass": 83,
+        "tearDown": 92,
+        "test_sigma_inicial_e_orientacao": 95,
+        "test_todos_controles_atualizam_imagem_e_raios": 100,
+        "test_botao_alterna_sem_alterar_fisica_e_preserva_modo": 116,
+        "test_alinhamento_e_extremos": 133
+      }
+    },
+    "tests/test_plataforma.py": {
+      "sha256": "5aa36e1c05fda9ab1be97dfab722dd5b719a1fcb958eff369ad3d21b3715ca50",
+      "linhas": 36,
+      "simbolos": {
+        "PlataformaTests": 7,
+        "test_wsl_com_display_prefere_xcb": 8,
+        "test_preserva_backend_explicito": 15,
+        "test_outros_ambientes_nao_sao_alterados": 24
+      }
+    },
+    "requeriments.txt": {
+      "sha256": "8c760ba92a710f7089f76d7de62060f20ae80b5e0073ef0c4a9f330e2ccd9977"
+    }
+  },
+  "UI_atualizar_sem_pintura": {
+    "mediana_ms": 58.56339499996466,
+    "p95_ms": 66.90362469953472
+  }
+}
